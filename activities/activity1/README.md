@@ -83,3 +83,37 @@ export const getAlbums = (callback: Function) => {
 3. Start the server:  npm run start
 
 4. The server runs on port 5000 
+
+API Endpoints
+Get All Albums
+
+Method: GET
+
+URL: http://localhost:5000/albums
+
+Get All Artists
+
+Method: GET
+
+URL: http://localhost:5000/artists
+
+Postman Demonstration
+
+Postman was used to send HTTP GET requests to each endpoint. The JSON responses confirm successful routing through the router, controller, and DAO layers.
+
+MVC Breakdown (Example: Albums)
+
+Router: albums.routes.ts defines the /albums endpoint.
+
+Controller: albums.controller.ts processes requests and responses.
+
+DAO: albums.dao.ts handles data retrieval.
+
+## Screencast Demonstration
+
+A screencast demonstrating the MusicAPI endpoints using Postman can be viewed here:
+
+[Click here to watch the screencast]https://www.loom.com/share/0d0864dc4d16448db30efb08483afd45
+
+
+
