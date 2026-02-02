@@ -15,3 +15,11 @@ The Activity 1 submission is located here: activities/activity1
 It contains an Express MVC API (MusicAPI) implemented with TypeScript, including routing, controllers, and data access objects (DAO).
 
 
+## Milestone 1 Status
+
+Milestone 1 is complete and includes:
+- Project proposal
+- Initial database design
+- UI sitemap
+- Low fidelity wireframes
+- Initial UML class design
