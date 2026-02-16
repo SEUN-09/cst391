@@ -1,0 +1,71 @@
+<div class="container mt-4">
+
+  <h2>Create Album</h2>
+
+  <form (ngSubmit)="createAlbum()" #albumForm="ngForm">
+
+    <div class="mb-3">
+      <label class="form-label">Artist ID</label>
+      <input
+        type="number"
+        class="form-control"
+        name="artistId"
+        [(ngModel)]="album.artistId"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Album Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        [(ngModel)]="album.title"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Year</label>
+      <input
+        type="number"
+        class="form-control"
+        name="year"
+        [(ngModel)]="album.year"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Image URL</label>
+      <input
+        type="text"
+        class="form-control"
+        name="image"
+        [(ngModel)]="album.image"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        name="description"
+        [(ngModel)]="album.description"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Create Album
+    </button>
+
+  </form>
+
+  <div *ngIf="message" class="alert alert-info mt-3">
+    {{ message }}
+  </div>
+
+</div>
+
