@@ -10,7 +10,7 @@ Activity 4 completes the Music Application by integrating the Angular front-end 
 The goal of this activity is to demonstrate asynchronous communication between a client-side Angular application and a server-side API, following modern Angular development practices.
 
 ---
-
+# Research
 ## Executive Summary
 
 In this activity, the Music Application was enhanced by replacing static, in-memory data with live API calls to an Express MusicAPI running on port 5000. Angular’s `HttpClient` was configured and used to retrieve artists, albums, and album details asynchronously.
