@@ -10,7 +10,7 @@ Activity 4 completes the Music Application by integrating the Angular front-end 
 The goal of this activity is to demonstrate asynchronous communication between a client-side Angular application and a server-side API, following modern Angular development practices.
 
 ---
-# Research
+
 ## Executive Summary
 
 In this activity, the Music Application was enhanced by replacing static, in-memory data with live API calls to an Express MusicAPI running on port 5000. Angular’s `HttpClient` was configured and used to retrieve artists, albums, and album details asynchronously.
@@ -157,7 +157,7 @@ The activity highlighted the importance of proper component communication, consi
 
 Overall, this activity strengthened understanding of Angular’s architecture, especially the separation of concerns between the user interface, business logic, and data services, while emphasizing best practices for building maintainable and scalable web applications.
 
-
+# Research
 ## Maintaining Logged In State in an Angular Application
 
 An Angular application maintains a logged in state primarily through **client side storage and authentication tokens**. After a user successfully logs in, the server typically returns a **JSON Web Token (JWT)** or a session identifier. Angular stores this token in **localStorage**, **sessionStorage**, or memory, depending on the security requirements of the application.
