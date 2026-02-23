@@ -1,338 +1,171 @@
-# CST 391 Activity 3 Part 1
-## Angular Components, Forms, and Responsive Layout
-
-## Overview
-
-This activity demonstrates the use of Angular standalone components, Bootstrap for responsive layout, reactive forms, event handling, data binding, and console logging. The application was developed using a browser based Angular configuration and runs locally using the Angular development server.
-- Responsive layout using Bootstrap
-- Component creation
-- Event handling
-- Data binding
-- Reactive and template driven forms
-- Passing data between components
-
-## Project Structure
-The Angular application is located in the following directory:
-activities/activity3/simpleapp
-
-
-- `simpleapp/`  
-  Angular application created using Angular CLI.
-
-## Running the Application
-
-Navigate into the Angular app folder and run:
-
-```bash
-cd simpleapp
-npm install
-ng serve
-```
-
-## Application Running
-
-The following screenshot shows the Angular application successfully running on the local development server.
-
-![Angular app running](./screenshots/app-running.png)
-
-## Angular Application Running
-
-The following screenshot confirms that the Angular application runs successfully after updating the angular.json configuration and restarting the development server.
-
-![Angular application running](./screenshots/angular-app-running.png)
-
-## Responsive Bootstrap Grid
-
-The following screenshots demonstrate a responsive Bootstrap grid layout.
-
-### Large Screen Layout
-![Bootstrap grid large screen](./screenshots/bootstrap-grid-large.png)
-
-### Small Screen Layout
-![Bootstrap grid small screen](./screenshots/bootstrap-grid-small.png)
-
-## Shop Component – Reactive Form
-
-The Shop component demonstrates:
-
-- Reactive forms
-
-- Event handling
-
-- Data binding
-
-- Conditional rendering
-
-## Angular Forms and Responsive Layout
-
----
-
-## Shop Component – Reactive Form
-
-The Shop component demonstrates the use of a reactive form, event handling, and data binding. The user enters a value into the form, submits it, and the result is displayed on the page.
-
----
-
-### Before Form Submission
-
-The screenshot below shows the Shop component before the form is submitted.
-
-![Before form submission](./screenshots/shop-before-name.png)
-
----
-
-### After Form Submission
-
-The screenshot below shows the Shop component after the form is submitted.  
-The submitted value is displayed on the page using data binding.
-
-![After form submission](./screenshots/shop-after-name.png)
-
----
-
-## Console Output
-
-The following screenshot confirms that submitting the form triggers a console log message, demonstrating successful event handling and logging.
-
-![Console output](./screenshots/shop-console-log.png)
-
-
-## Technologies Used
-
-- Angular (standalone components)
-
-- Bootstrap
-
-- TypeScript
-
-- HTML and CSS
-
-- Angular CLI
-
-## Summary
-
-This activity successfully demonstrates responsive design using Bootstrap, reactive form implementation, event handling, data binding, and console logging within an Angular application. The application runs without errors and meets all requirements outlined for CST 391 Activity 3.
-
-
-## Research
-
-### 1. `@Input` Decorator in `info.component.ts`
-
-The `@Input` decorator in Angular is used to allow data to be passed from a parent component to a child component. In `info.component.ts`, it enables the Info component to receive values such as a name or message that originate from another component. This supports component communication while keeping components modular and reusable. Without the `@Input` decorator, the child component would not be able to receive external data directly from its parent.
-
----
-
-### 2. `[value]` in `info.component.html`
-
-The `[value]` syntax in `info.component.html` is an example of property binding in Angular. It binds a value from the component’s TypeScript file to the value property of an HTML element. This ensures that the displayed value in the input field is always synchronized with the component data. Property binding allows Angular to dynamically update the DOM instead of relying on static HTML values.
-
----
-
-### 3. `[(ngModel)]` in `info.component.html`
-
-The `[(ngModel)]` directive provides two way data binding in Angular. It allows data to flow from the component to the view and from the view back to the component automatically. When a user types into an input field, the bound variable in the component updates immediately, and when the variable changes in the component, the view updates as well. This approach simplifies handling user input and is commonly used in template driven forms.
-
-# CST-391 Activity 3 – Music Application (Part 2)
-## Front-End Development with Angular
+# CST-391 Activity 4  
+## Music Application – Integration with Back End
 
 ---
 
 ## Overview
 
-This project is the front-end portion of the **Music Application** developed for CST-391 Activity 3.  
-The goal of Part 2 is to build a structured Angular application that uses multiple components, routing, event handling, and data binding, while preparing the application to later connect to a Music API.
+Activity 4 completes the Music Application by integrating the Angular front-end with a live back-end service. In this activity, the application is refactored to remove hard-coded data and instead retrieve real data from an Express Music API using Angular’s `HttpClient`.
 
-For this activity, mocked JSON data is used to simulate real music data and support UI development. All data is managed through a shared Music Service and rendered dynamically using Angular standalone components. 
+The goal of this activity is to demonstrate asynchronous communication between a client-side Angular application and a server-side API, following modern Angular development practices.
 
 ---
 
 ## Executive Summary
 
-In this phase of the project, an Angular application named **musicapp** was created using Angular’s modern standalone component structure. Bootstrap was integrated to provide a responsive and professional user interface.
+In this activity, the Music Application was enhanced by replacing static, in-memory data with live API calls to an Express MusicAPI running on port 5000. Angular’s `HttpClient` was configured and used to retrieve artists, albums, and album details asynchronously.
 
-The application establishes the foundational structure required for future milestones, including routing, component communication, and service-based data access. This phase focuses on correctness, structure, and preparation rather than full feature completion.
-
----
-
-## Application Setup
-
-The application was created with routing enabled and Bootstrap added for UI styling.
-
-Key setup items include:
-- Angular standalone components
-- Bootstrap CSS and JavaScript integration
-- Development server configuration
-- Project structure aligned with course instructions
+Service methods were refactored to use callback functions, and all calling components were updated to handle asynchronous responses correctly. This approach reflects real-world front-end and back-end integration patterns and reinforces the concepts of asynchronous programming, Observables, and separation of concerns.
 
 ---
 
-## Implemented Features
+## Application Architecture
 
-- Artist List with dynamic album display  
-- Create Album form with image support  
-- Automatic refresh of artist albums after creation  
-- About page displayed as an About Box  
-- Navigation bar linking all pages  
-- Image rendering using Angular assets folder  
+The solution consists of two main components:
 
----
+### Front End
+- Angular standalone application
+- Runs on a local development port (e.g., 4200 or dynamically assigned)
+- Handles UI rendering, routing, and user interaction
 
-## Initial Application View
+### Back End
+- Express Music API
+- Runs on `http://localhost:5000`
+- Provides REST endpoints for artists and albums
 
-The following screenshot shows the initial application running locally after setup.
-
-### Initial Application Page
-
-![Initial Application Page](./screenshots/part2/initial-page.png)
-
-
-## Bootstrap Integration
-
-Bootstrap was successfully added to the application through the `angular.json` configuration file. This allows consistent styling and interactive UI elements to function correctly.
-
-### Bootstrap Layout Example
-
-![Bootstrap Layout](./screenshots/part2/bootstrap-layout.png)
-
-
-## Form Interaction and Data Binding
-
-A simple form was implemented to demonstrate:
-- Event handling
-- Data binding
-- Console logging
-
-# CST-391 Activity 3 — Part 2  
-## My Music Collection
-
-This section of the project focuses on updating the application layout, configuring navigation, and wiring routing views using Angular standalone components.
-
-The goal of Part 2 was to clean the default Angular view, add a Bootstrap navigation bar, and ensure routed components display correctly.
+The Angular application communicates with the Express API via HTTP requests using `HttpClient`.
 
 ---
 
-## 🔧 Changes Implemented
-
-### 1. Cleaned Default Angular View
-- Removed the default Angular welcome content from `app.html`
-- Left only the `router-outlet` so routed components control the view
-- Updated the application title to **My Music**
-
----
-
-### 2. Bootstrap Navigation Bar
-A Bootstrap navbar was added to provide consistent navigation across the application.
-
-The navigation bar includes:
-- **Brand:** My Music
-- **GCU Home:** External link to https://www.gcu.edu
-- **Create:** Routes to the Create Album view
-- **Artist List:** Routes to the artist listing
-- **About:** Displays application information
-
-Navigation uses Angular `routerLink` instead of traditional `href` attributes.
-
----
-
-### 3. Routing Configuration
-Routes were defined in `app.routes.ts` to support navigation:
-
-| Route | Component |
-|------|----------|
-| `/list-artists` | Artist list |
-| `/create` | Create Album |
-| `/about` | About page |
-| `/display/:id` | Album display (future) |
-| `/edit/artist/:id` | Edit album (future) |
-| `/delete/artist/:id` | Delete album (future) |
-
-The default route redirects to `/list-artists`.
-
----
-
-### 4. About Page
-An About component was created to display a short description of the application.
-
-The About page explains:
-- The purpose of the project
-- Technologies used
-- Current and future features
-
----
-
-## 🖥️ Screenshots
-
-
-### About Page Rendered via Routing
-![About Page](./screenshots/part2/about-page.png)
-
----
-
-###  GCU Homepage
-This screenshot shows one of the navigation bar components used in the application, providing access to the main menu and branding elements.
-
-![GCU Homepage](./screenshots/part2/GCU-homepage.png)
-
-
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Angular (Standalone Components)
 - TypeScript
-- HTML & CSS
-- Bootstrap
-- Visual Studio Code
+- Express.js
+- Node.js
+- HTML / CSS
+- RESTful APIs
+- Angular HttpClient
+- Observables and Callbacks
 
 ---
 
-### Create Album – Added Album
+## HTTP Client Integration
 
-This screen shows the Create Album form and a successfully added album.  
-The album data is stored in the Music Service and becomes immediately available under the selected artist.
+The Angular application was updated to include HTTP support by configuring the `HttpClient` provider. All service methods were refactored to retrieve data asynchronously from the Express API rather than returning static arrays.
 
-![Added Album](./screenshots/part2/Added-album.png)
-
----
-
-### About Box
-
-The About page is implemented as an About Box that provides a brief description of the application and its purpose.
-
-![About Box](./screenshots/part2/About-box.png)
+Key changes include:
+- Injection of `HttpClient` into the music service
+- Removal of hard-coded sample data
+- Introduction of callback-based method signatures
+- Incremental testing of each updated method
 
 ---
 
-## Technical Notes
+## Asynchronous Data Handling
 
-- Images are stored in the `src/assets` directory and referenced using relative paths.
-- The Artist List automatically refreshes because all components share the same Music Service instance.
-- Album images render correctly when valid image URLs or asset paths are provided.
-- Navigation is handled using Angular Router.
+Angular’s `HttpClient` is built around Observables. While Promises resolve once, Observables allow subscriptions to handle asynchronous data streams. In this application, each HTTP request automatically completes after returning data, preventing resource leaks.
+
+Callback methods were used to pass retrieved data back to components once HTTP responses were received. This required updating all consuming components to work asynchronously rather than synchronously.
+
+---
+
+## Features Implemented
+
+- View list of artists retrieved from the API
+- Select an artist to view associated albums
+- View album details including tracks
+- Add new albums using live API calls
+- Edit existing album information
+- Display updated data without reloading the application
 
 ---
 
-## Research Component
+## How to Run the Application
 
-The `music-service.service.ts` file is fully commented and explains the purpose of each method, including:
+### Start the Express Music API
+1. Navigate to the `music-api` directory
+2. Install dependencies:
+   ```bash
+   npm install
+ ```  
+3. Install dependencies:
+     npm install
 
-- Retrieving artists
-- Creating albums
-- Fetching albums by artist
-- Managing in-memory application data
+4. Start the application:
 
+   ng serve  
 
-The fully commented Music Service code used for the research portion of this activity can be found below:
+ 5.    Open the application using the local URL provided in the terminal (for example):
 
-[Open Research Work](./src/data/Research-Work.txt)
+http://localhost:4200 
+```
+## Testing and Validation
 
----
+The application was tested incrementally as each service method was refactored from hard-coded data to live API calls. Express API endpoints were first validated directly in the browser to confirm correct responses before being consumed by the Angular application.
+
+Console logging was used during development to verify successful data flow between the Express API, the Angular service layer, and UI components. This ensured that asynchronous callbacks were functioning correctly and that data binding updated the user interface as expected.
+
+## Screenshots
+**Album Details API Response**
+
+![Album Details API Response](./screenshots/Album%20Details%20API%20Response.png)
+
+This screenshot shows the Express API returning album details in JSON format.
+
+**Artists API Response**
+
+![Artists API Response](./screenshots/Artists-API-Response.png)
+
+This screenshot shows the Express API returning the list of artists in JSON format.
+
+**Main Application Screen**
+
+![Main Application Screen](./screenshots/Main-Application-Screen.png)
+
+This screenshot shows the initial Angular application layout with the navigation bar before any artist is selected.
+
+**Artist List Screen**
+
+![Artist List Screen](./screenshots/Artist-List-Screen.png)
+
+This screenshot shows the list of artists retrieved from the Express API and displayed in the Angular application.
+
+**Album List Screen**
+
+![Album List Screen](./screenshots/Album-List-Screen.png)
+
+This screenshot shows the albums displayed after selecting an artist from the list.
+
+**Add Album Screen**
+
+![Add Album Screen](./screenshots/Add-Album-Screen.png)
+
+This screenshot shows the form used to create a new album and submit it to the Express API.
+
+## Artist List and Albums
+
+![Artist List with Edit and Delete Actions](./screenshots/artist-list-albums-edit-delete.png)
+
+This screen displays artists and their albums, with edit and delete buttons available for managing each album.
 
 ## Conclusion
 
-This activity demonstrates component communication, routing, form handling, and dynamic UI updates in Angular.  
-The application fulfills all required deliverables and prepares the foundation for future enhancements such as editing and deleting albums.
+Activity 4 reinforced the practical use of Angular components, services, and routing to build a functional, data driven web application. Through this activity, the application successfully displayed artists and their albums, responded to user selections, and supported album editing and deletion actions.
 
----
+The activity highlighted the importance of proper component communication, consistent data models, and service based API interaction. It also demonstrated how Angular manages application state and dynamically updates the user interface without page reloads.
+
+Overall, this activity strengthened understanding of Angular’s architecture, especially the separation of concerns between the user interface, business logic, and data services, while emphasizing best practices for building maintainable and scalable web applications.
 
 
+## Maintaining Logged In State in an Angular Application
 
+An Angular application maintains a logged in state primarily through **client side storage and authentication tokens**. After a user successfully logs in, the server typically returns a **JSON Web Token (JWT)** or a session identifier. Angular stores this token in **localStorage**, **sessionStorage**, or memory, depending on the security requirements of the application.
+
+To keep track of the logged in state across pages and refreshes, Angular often uses an **authentication service**. This service exposes methods such as `isLoggedIn()` and holds the current authentication state. Route protection is handled using **Route Guards**, which prevent unauthorized users from accessing protected routes.
+
+Communication with the server happens through **HTTP requests** using Angular’s `HttpClient`. The stored token is attached to each request, usually in the **Authorization header**, via an **HTTP Interceptor**. This allows the server to verify the user’s identity on every request without requiring repeated logins.
+
+On the server side, the token is validated to confirm authenticity and permissions. If the token is expired or invalid, the server responds with an error, and Angular updates the client state by logging the user out.
+
+This approach provides a secure, scalable, and stateless way to manage authentication in modern Angular applications.
