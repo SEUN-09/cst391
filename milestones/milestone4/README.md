@@ -133,39 +133,53 @@ Content-Type: application/json
 ## 5. Angular Application Pages
 
 ### 5.1 Consignment List (`/consignments`)
-### Consignment List
+
 ![Consignment List](screenshots/consignment-lists.png)
 
-Displays all consignments in a styled table with color-coded status badges. Provides a "New Consignment" button and a "View" link for each row.
+Displays all consignments in a styled table with color-coded status badges. Provides a **New Consignment** button and a **View** link for each row.
 
-**Component:** `ConsignmentListComponent`
+**Component:** `ConsignmentListComponent`  
 **API Call:** `GET /consignments`
 
+---
+
 ### 5.2 Consignment Details (`/consignments/:id`)
-### Consignment Detail
-![Consignment List](screenshots/consignment-detail.png)
 
-Displays full details of a single consignment. Provides "Edit Consignment" and "Delete" action buttons.
+![Consignment Detail](screenshots/Consignment-detail.png)
 
-**Component:** `ConsignmentDetailsComponent`
+Displays full details of a single consignment. Provides **Edit Consignment** and **Delete** action buttons.
+
+**Component:** `ConsignmentDetailsComponent`  
 **API Call:** `GET /consignments/:id`
-### Create Consignment
-![Consignment List](screenshots/Create-consignment.png)
 
-### 5.3 Create / Edit Form (`/consignments/new`, `/consignments/:id/edit`)
-### Created Consignment
-![Consignment List](screenshots/created-consignment-.png)
+---
 
-### Edit Consignment
-![Consignment List](screenshots/edit-page.png)
+git push origin main
+Form used to create a new consignment record.
 
-![Consignment List](screenshots/newly-edited.png)
+---
 
-A shared form component that handles both creating new consignments and editing existing ones. The form detects edit mode via the route parameter.
+### 5.4 Created Consignment
 
-**Component:** `ConsignmentFormComponent`
-**API Calls:** `POST /consignments` (create), `PUT /consignments/:id` (edit)
+![Created Consignment](screenshots/created-consignment.png)
 
+Shows the newly created record after submission.
+
+---
+
+### 5.5 Edit Consignment
+
+![Edit Consignment](screenshots/edit-page.png)
+
+Allows modification of consignment details.
+
+---
+
+### 5.6 Updated Consignment
+
+![Updated Consignment](screenshots/newly-edited.png)
+
+Displays the record after editing and saving changes.
 ---
 
 ## 6. Design Updates & Known Issues
