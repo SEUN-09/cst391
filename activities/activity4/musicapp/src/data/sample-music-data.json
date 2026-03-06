@@ -1,0 +1,26 @@
+[
+  {
+    "albumId": 1,
+    "artist": "Coldplay",
+    "title": "Parachutes",
+    "year": 2000,
+    "image": "assets/parachutes.jpg",
+    "description": "Debut studio album by Coldplay.",
+    "tracks": [
+      { "number": 1, "title": "Don't Panic" },
+      { "number": 2, "title": "Shiver" }
+    ]
+  },
+  {
+    "albumId": 2,
+    "artist": "Adele",
+    "title": "21",
+    "year": 2011,
+    "image": "assets/21.jpg",
+    "description": "Second studio album by Adele.",
+    "tracks": [
+      { "number": 1, "title": "Rolling in the Deep" },
+      { "number": 2, "title": "Someone Like You" }
+    ]
+  }
+]

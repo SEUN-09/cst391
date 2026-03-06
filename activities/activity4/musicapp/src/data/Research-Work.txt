@@ -1,0 +1,156 @@
+Research Work
+
+This section presents the fully commented music-service.service.ts file used in the Music Application. The service acts as a façade between the application components and the underlying data by managing artists and albums in memory. Each method is documented to explain its purpose, inputs, outputs, and how it supports component communication and data management within the Angular application.
+
+/**
+ * music-service.service.ts
+ *
+ * This service acts as the central data manager for the music application.
+ * It is responsible for storing, retrieving, creating, updating, and deleting
+ * artists and albums used throughout the application.
+ *
+ * The service uses in-memory arrays to simulate a database.
+ * This approach is suitable for learning purposes and small applications.
+ */
+
+import { Injectable } from '@angular/core';
+import { Artist } from '../models/artist.model';
+import { Album } from '../models/album.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MusicService {
+
+  /**
+   * A private array that holds all Artist objects.
+   * This simulates an Artist table in a database.
+   */
+  private artists: Artist[] = [
+    { artistId: 1, artist: 'Coldplay' },
+    { artistId: 2, artist: 'Adele' },
+    { artistId: 3, artist: 'King Sunny Ade' }
+  ];
+
+  /**
+   * A private array that holds all Album objects.
+   * This simulates an Album table in a database.
+   */
+  private albums: Album[] = [
+    {
+      albumId: 1,
+      artistId: 1,
+      title: 'Parachutes',
+      year: 2000,
+      image: 'https://upload.wikimedia.org/wikipedia/en/2/2d/Coldplay_-_Parachutes.png',
+      description: 'Debut album by Coldplay.',
+      tracks: []
+    },
+    {
+      albumId: 2,
+      artistId: 1,
+      title: 'A Rush of Blood to the Head',
+      year: 2002,
+      image: 'https://upload.wikimedia.org/wikipedia/en/6/6c/Coldplay_-_A_Rush_of_Blood_to_the_Head.png',
+      description: 'Second studio album by Coldplay.',
+      tracks: []
+    }
+  ];
+
+  /**
+   * Returns the full list of artists.
+   *
+   * @returns Artist[] - an array of Artist objects
+   */
+  getArtists(): Artist[] {
+    return this.artists;
+  }
+
+  /**
+   * Returns all albums that belong to a specific artist.
+   *
+   * @param artistId - the unique identifier of the artist
+   * @returns Album[] - a list of albums for the given artist
+   */
+  getAlbumsByArtist(artistId: number): Album[] {
+    return this.albums.filter(album => album.artistId === artistId);
+  }
+
+  /**
+   * Finds and returns a single album by its albumId.
+   *
+   * @param albumId - the unique identifier of the album
+   * @returns Album | null - the album if found, otherwise null
+   */
+  getAlbumById(albumId: number): Album | null {
+    const album = this.albums.find(a => a.albumId === albumId);
+    return album ? album : null;
+  }
+
+  /**
+   * Creates a new album and adds it to the albums array.
+   *
+   * If the operation is successful, the album is pushed into the array
+   * and the albumId is returned.
+   *
+   * If an error occurs, the method returns -1.
+   *
+   * @param album - the Album object to be created
+   * @returns number - albumId if successful, -1 if failed
+   */
+  createAlbum(album: Album): number {
+    try {
+      // Assign a new albumId based on the current array length
+      album.albumId = this.albums.length + 1;
+
+      // Add the album to the albums array
+      this.albums.push(album);
+
+      return album.albumId;
+    } catch {
+      return -1;
+    }
+  }
+
+  /**
+   * Updates an existing album in the albums array.
+   *
+   * The method locates the album using both albumId and artistId.
+   * If found, the album is replaced using array splice.
+   *
+   * @param album - the updated Album object
+   * @returns number - 0 if successful, -1 if album not found
+   */
+  updateAlbum(album: Album): number {
+    const index = this.albums.findIndex(
+      a => a.albumId === album.albumId && a.artistId === album.artistId
+    );
+
+    if (index !== -1) {
+      this.albums.splice(index, 1, album);
+      return 0;
+    }
+
+    return -1;
+  }
+
+  /**
+   * Deletes an album from the albums array.
+   *
+   * The album is located using its albumId.
+   * If found, it is removed using splice.
+   *
+   * @param albumId - the unique identifier of the album
+   * @returns number - 0 if successful, -1 if album not found
+   */
+  deleteAlbum(albumId: number): number {
+    const index = this.albums.findIndex(a => a.albumId === albumId);
+
+    if (index !== -1) {
+      this.albums.splice(index, 1);
+      return 0;
+    }
+
+    return -1;
+  }
+}

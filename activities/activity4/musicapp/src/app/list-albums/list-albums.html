@@ -1,0 +1,28 @@
+<h3 class="mt-4">Albums</h3>
+
+<ul class="list-group">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center"
+    *ngFor="let album of albums"
+  >
+    <span>
+      {{ album.title }} ({{ album.year }})
+    </span>
+
+    <span>
+      <button
+        class="btn btn-sm btn-outline-primary me-2"
+        (click)="onEdit(album.albumId)"
+      >
+        Edit
+      </button>
+
+      <button
+        class="btn btn-sm btn-outline-danger"
+        (click)="onDelete(album.albumId)"
+      >
+        Delete
+      </button>
+    </span>
+  </li>
+</ul>

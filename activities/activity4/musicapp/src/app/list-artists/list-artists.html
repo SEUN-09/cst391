@@ -1,0 +1,24 @@
+<h2>Artists</h2>
+
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let artist of artists"
+    (click)="onSelectArtist(artist)"
+    style="cursor: pointer;"
+  >
+    {{ artist.artist }}
+  </li>
+</ul>
+
+<!-- Albums show only after an artist is selected -->
+<div *ngIf="selectedArtist">
+  <h3 class="mt-4">
+    Albums by {{ selectedArtist.artist }}
+  </h3>
+
+  <app-list-albums
+    [artistId]="selectedArtist.artistId"
+    [albums]="albums">
+  </app-list-albums>
+</div>
