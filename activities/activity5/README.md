@@ -1,6 +1,6 @@
 # CST-391 Activity 5 - React Music App & State Changer Demo
 
-**Name:** [Your Name]  
+**Name:** Oluwaseun Akerele  
 **Course:** CST-391  
 **Activity:** 5  
 
@@ -16,31 +16,31 @@
 
 ## Part 1 - Music App with Custom Components
 
-### Summary
+### Executive Summary
 In this part, I created a React music app using custom components, props, and Bootstrap. A **component** is a reusable piece of UI code that can be used multiple times throughout the application. **Props** are values passed from a parent component to a child component, similar to function parameters in a conventional programming language. **JSX** is JavaScript that looks like HTML and is unique to React. Instead of copying and pasting card HTML repeatedly, I created a reusable `Card` component that accepts props for the album title, description, button text, and image URL. Bootstrap was imported via CDN in `index.html` to style the cards.
 
 ### Screenshot 1 - Single Card View
 ![Single Card View](screenshots/single-card-view.png)  
-*Figure 1: Initial React app showing a single Bootstrap card with album title, description, and a Learn More button.*
+
 
 ### Screenshot 2 - Three Cards Stacked Vertically
 ![Three Cards Stacked Vertically](screenshots/3cards-stacked-vertically.png)  
-*Figure 2: Three Card components rendered using props, each displaying different album data stacked vertically.*
+
 
 ---
 
 ## Part 2 - State Changer Mini App
 
-### Summary
+### Executive Summary
 In this part, I built a separate mini app to demonstrate React **state** using the `useState` hook. State is different from props — state is managed inside the component and can change dynamically based on user interaction, while props come from the parent and are read-only. The `useState` hook returns the current state value and a function to update it. Each `Counter` component independently tracks its own click count and text message state. Updating state triggers a re-render of the component, which is how the UI updates in React.
 
 ### Screenshot 3 - Counter App at 0 Clicks
 ![Counter at 0 Clicks](screenshots/countet-at-0clicks.png)  
-*Figure 3: Initial view of the State Changer app showing two Counter components, each with 0 clicks and default message text.*
+
 
 ### Screenshot 4 - Counter App After Clicking
 ![Counter After Clicking](screenshots/counter-after-clicking.png)  
-*Figure 4: Counter One shows 4 clicks and Counter Two shows 1 click, demonstrating that each component manages its own independent state.*
+
 
 ---
 
@@ -51,7 +51,7 @@ In this part, I returned to the music app and applied what I learned about state
 
 ### Screenshot 5 - Three Cards Displayed Horizontally
 ![Three Cards Horizontally](screenshots/3cards-stacked-horizontally.png)  
-*Figure 5: Updated music app showing three album cards displayed horizontally using CSS FlexBox and rendered dynamically using the map() function.*
+
 
 ---
 
