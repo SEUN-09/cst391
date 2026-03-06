@@ -36,23 +36,26 @@ Key achievements in this milestone:
 ---
 
 ## 3. Application Architecture
-
-```
-milestone4/
-├── api/                        # Express REST API (Node.js)
-│   ├── server.js               # API routes and MySQL connection
-│   └── package.json
-└── consignment.ui/             # Angular front-end application
-    └── src/
-        └── app/
-            ├── core/
-            │   └── services/
-            │       └── consignments.service.ts   # HTTP service layer
-            └── pages/
-                └── consignments/
-                    ├── consignment-list/         # List all consignments
-                    ├── consignment-details/      # View single consignment
-                    └── consignment-form/         # Create and Edit form
+```mermaid
+graph TD
+    A[milestone4/] --> B[api/]
+    A --> C[consignment.ui/]
+    
+    B --> B1[server.js - API routes and MySQL connection]
+    B --> B2[package.json]
+    
+    C --> D[src/]
+    D --> E[app/]
+    E --> F[core/]
+    E --> G[pages/]
+    
+    F --> F1[services/]
+    F1 --> F2[consignments.service.ts - HTTP service layer]
+    
+    G --> H[consignments/]
+    H --> H1[consignment-list/ - List all consignments]
+    H --> H2[consignment-details/ - View single consignment]
+    H --> H3[consignment-form/ - Create and Edit form]
 ```
 
 ### Technology Stack
