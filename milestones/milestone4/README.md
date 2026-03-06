@@ -96,7 +96,7 @@ All endpoints consume and produce `application/json`.
   "created_at": "2026-02-06T21:51:46.000Z"
 }
 ```
-
+```
 ### Status Values
 
 | Value | Description |
@@ -108,17 +108,12 @@ All endpoints consume and produce `application/json`.
 ### Example: Create Consignment
 
 **Request**
-```
+
 POST http://localhost:3000/consignments
 Content-Type: application/json
-
-{
-  "sender_name": "Alice Johnson",
-  "receiver_name": "Bob Williams",
-  "status": "Pending",
-  "delivery_address": "456 Oak Ave, Tempe AZ"
-}
 ```
+![JSON Request Example](screenshots/json-data.png)
+````
 
 **Response**
 ```json
@@ -152,10 +147,7 @@ Displays full details of a single consignment. Provides **Edit Consignment** and
 **Component:** `ConsignmentDetailsComponent`  
 **API Call:** `GET /consignments/:id`
 
----
 
-git push origin main
-Form used to create a new consignment record.
 
 ---
 
