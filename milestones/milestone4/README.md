@@ -1,7 +1,7 @@
 # Samopel Logistics Hub — Design Report
 
-**Course:** CST391 — JavaScript Web Application Development
-**Milestone:** 4 — Angular Front-End Application
+**Course:** CST391 — JavaScript Web Application Development  
+**Milestone:** 4 — Angular Front-End Application  
 **Application:** Samopel Logistics Hub (Consignment Tracking System)
 
 ---
@@ -96,7 +96,7 @@ All endpoints consume and produce `application/json`.
   "created_at": "2026-02-06T21:51:46.000Z"
 }
 ```
-```
+
 ### Status Values
 
 | Value | Description |
@@ -109,13 +109,12 @@ All endpoints consume and produce `application/json`.
 
 **Request**
 
-POST http://localhost:3000/consignments
-Content-Type: application/json
-```
+`POST http://localhost:3000/consignments`
+
 ![JSON Request Example](screenshots/json-data.png)
-````
 
 **Response**
+
 ```json
 {
   "reference_number": "REF-4821",
@@ -147,7 +146,16 @@ Displays full details of a single consignment. Provides **Edit Consignment** and
 **Component:** `ConsignmentDetailsComponent`  
 **API Call:** `GET /consignments/:id`
 
+---
 
+### 5.3 Create Consignment (`/consignments/new`)
+
+![Create Consignment](screenshots/Create-consignment.png)
+
+Form to create a new consignment record. Submits data via POST to the API.
+
+**Component:** `ConsignmentFormComponent`  
+**API Call:** `POST /consignments`
 
 ---
 
@@ -172,6 +180,7 @@ Allows modification of consignment details.
 ![Updated Consignment](screenshots/newly-edited.png)
 
 Displays the record after editing and saving changes.
+
 ---
 
 ## 6. Design Updates & Known Issues
@@ -211,12 +220,12 @@ Displays the record after editing and saving changes.
 ```
 
 ---
+
 ## Screencast Demo
 
 ### Samopel Logistics Hub — Milestone 4 Demo
-https://www.loom.com/share/4abc7e14aed8422a8ea67860b1c4148b
 
-> Click the image above to watch the full demo on Loom.
+[▶ Watch Demo on Loom](https://www.loom.com/share/4abc7e14aed8422a8ea67860b1c4148b)
 
 **Demo covers:**
 - Application navigation
@@ -225,6 +234,8 @@ https://www.loom.com/share/4abc7e14aed8422a8ea67860b1c4148b
 - Create new consignment (CREATE)
 - Edit existing consignment (UPDATE)
 - Delete consignment (DELETE)
+
+---
 
 ## 8. Setup & Running Instructions
 
@@ -254,7 +265,7 @@ ng serve
 
 ### Database
 
-Database: `cst391`
+Database: `cst391`  
 Table: `consignments`
 
 ```sql
