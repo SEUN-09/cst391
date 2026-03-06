@@ -1,0 +1,11 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    margin: 10px;
+    padding: 10px;
+  }
