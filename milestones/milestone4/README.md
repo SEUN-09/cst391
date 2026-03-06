@@ -21,6 +21,10 @@ The application is composed of two layers:
 
 This milestone delivers a fully functional Angular front-end application integrated with the REST API developed in Milestone 3. The application implements complete CRUD (Create, Read, Update, Delete) operations on consignment records, with a polished, dark-themed UI branded as "Samopel Logistics Hub."
 
+## Presentation
+
+[📊 View Milestone 4 PowerPoint](Doc/Milestone4_powerpoint.pptx)
+
 Key achievements in this milestone:
 
 - All five CRUD operations are functional end-to-end through the UI.
@@ -129,6 +133,8 @@ Content-Type: application/json
 ## 5. Angular Application Pages
 
 ### 5.1 Consignment List (`/consignments`)
+### Consignment List
+![Consignment List](screenshots/consignment-lists.png)
 
 Displays all consignments in a styled table with color-coded status badges. Provides a "New Consignment" button and a "View" link for each row.
 
@@ -136,13 +142,24 @@ Displays all consignments in a styled table with color-coded status badges. Prov
 **API Call:** `GET /consignments`
 
 ### 5.2 Consignment Details (`/consignments/:id`)
+### Consignment Detail
+![Consignment List](screenshots/consignment-detail.png)
 
 Displays full details of a single consignment. Provides "Edit Consignment" and "Delete" action buttons.
 
 **Component:** `ConsignmentDetailsComponent`
 **API Call:** `GET /consignments/:id`
+### Create Consignment
+![Consignment List](screenshots/Create-consignment.png)
 
 ### 5.3 Create / Edit Form (`/consignments/new`, `/consignments/:id/edit`)
+### Created Consignment
+![Consignment List](screenshots/created-consignment-.png)
+
+### Edit Consignment
+![Consignment List](screenshots/edit-page.png)
+
+![Consignment List](screenshots/newly-edited.png)
 
 A shared form component that handles both creating new consignments and editing existing ones. The form detects edit mode via the route parameter.
 
@@ -188,6 +205,20 @@ A shared form component that handles both creating new consignments and editing 
 ```
 
 ---
+## Screencast Demo
+
+### Samopel Logistics Hub — Milestone 4 Demo
+https://www.loom.com/share/4abc7e14aed8422a8ea67860b1c4148b
+
+> Click the image above to watch the full demo on Loom.
+
+**Demo covers:**
+- Application navigation
+- List all consignments (READ ALL)
+- View consignment details (READ)
+- Create new consignment (CREATE)
+- Edit existing consignment (UPDATE)
+- Delete consignment (DELETE)
 
 ## 8. Setup & Running Instructions
 
