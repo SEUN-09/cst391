@@ -1,0 +1,29 @@
+.post {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+  .post p {
+    margin: 0;
+    flex: 1;
+  }
+  
+  .post button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+  
+  .post button:hover {
+    background-color: #b02a37;
+  }
