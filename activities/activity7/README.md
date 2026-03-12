@@ -29,19 +29,21 @@ In the Music Application, the `NewAlbum.js` component was fully implemented as a
 
 ### Screenshot 1 - Blog Posts Initial State
 
-![Blog Posts - Initial State](screenshots/Blog%20Posts%20-%20Initial%20State.png)
+![Blog Posts - Initial State](screenshots/git add README.md
+git commit -m "Add Activity 7 README"
+git push
 
 *Figure 1: The Blog Posts app showing the initial state with three hardcoded posts and the AddPost controlled component form at the top.*
 
 ### Screenshot 2 - Blog Posts After Adding a Post
 
-![Blog Posts - Add Post](screenshots/Blog%20Posts%20-%20Add%20Post.png)
+![Blog Posts - Add Post](screenshots/Blog-Posts-Add-Post.png)
 
 *Figure 2: A new post "React is good to interact with" has been dynamically added to the list using the controlled textarea and the spread syntax `[...postList, newPost]`.*
 
 ### Screenshot 3 - Blog Posts After Deleting a Post
 
-![Blog Posts - Delete Post](screenshots/Blog%20Posts%20-%20Delete%20Post.png)
+![Blog Posts - Delete Post](screenshots/Blog-Posts-Delete-Post.png)
 
 *Figure 3: The first post has been removed using the `.filter()` method. The parent App component manages state and the delete callback is passed down to each Post child component.*
 
@@ -63,13 +65,13 @@ The Blog Mini App demonstrated how to dynamically add and remove components from
 
 ### Screenshot 4 - Add New Album Form
 
-![Music App - Add New Album Form](screenshots/Music%20App%20-%20Add%20New%20Album%20Form.png)
+![Music App - Add New Album Form](screenshots/Music-App-Add-New-Album-Form.png)
 
 *Figure 4: The Add New Album form filled in with details for the Fleetwood Mac album "Rumours". Each field is a controlled component with its own `useState` hook and `onChange` handler.*
 
 ### Screenshot 5 - Music App Home
 
-![Music App - Home](screenshots/Music%20App%20-%20Home.png)
+![Music App - Home](screenshots/Music-App-Home.png)
 
 *Figure 5: The Music Albums home page showing all album cards with the new Edit button added alongside the existing View button.*
 
@@ -90,13 +92,13 @@ The New Album form was implemented as a fully controlled React component. Key co
 
 ### Screenshot 6 - Edit Album Form (Pre-filled)
 
-![Music App - Edit Album](screenshots/Music%20App%20-%20Edit%20Album.png)
+![Music App - Edit Album](screenshots/Music-App-Edit-Album.png)
 
 *Figure 6: The Edit Album form pre-filled with the existing data for the selected album. The form title switches to "Edit Album" and the submit button changes to "Update Album" when in edit mode.*
 
 ### Screenshot 7 - View Album
 
-![Music App - View Album](screenshots/Music%20App%20-%20View%20Album.png)
+![Music App - View Album](screenshots/Music-App-View-Album.png)
 
 *Figure 7: The single album view showing the album cover image, title, and description. The Back to Albums button uses `useNavigate` to return to the home page.*
 
